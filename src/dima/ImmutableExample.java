@@ -76,6 +76,8 @@ public class ImmutableExample {
         System.out.println("get from map for secondSet and secondMyValue = " + map.get(secondMyValue));
 
         myValue.getMyClassOwnersSet().add(new MyClassOwners("dsdsddsd"));
+        final int a = 10;
+        //a = 20; //error
         System.out.println(myValue);
     }
 
@@ -86,6 +88,47 @@ public class ImmutableExample {
         //System.out.printLn(transportTypeSizeMap.get(firstKey));
         //
     }
+
+
+   final static Car constCar = new Car("1", 1);//immutable class is used for creation constants
+
+    void method(){
+        HashMap<Car, String> map = new HashMap<>();
+        map.put(constCar, "first"); //
+    }
+
+
 }
 
+
+final class Car {
+    private final String color;
+    private final Integer numberPlate;
+
+    public Car(String color, Integer numberPlate) {
+        this.color = color;
+        this.numberPlate = numberPlate;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public Integer getNumberPlate() {
+        return numberPlate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return Objects.equals(color, car.color) && Objects.equals(numberPlate, car.numberPlate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, numberPlate);
+    }
+}
 

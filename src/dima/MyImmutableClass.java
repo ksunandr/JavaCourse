@@ -13,12 +13,18 @@ public class MyImmutableClass {
 
     public MyImmutableClass(int integer, Set<MyClassOwners> myClassOwnersSet) {
         this.integer = integer;
-        //this.myClassOwnersSet = myClassOwnersSet;
+        //this.myClassOwnersSet = myClassOwnersSet; //wrong
         this.myClassOwnersSet = new HashSet<>(myClassOwnersSet);
+        //this.myClassOwnersSet =  Collections.unmodifiableSet(myClassOwnersSet) //looks like it is possible
     }
 
     public Set<MyClassOwners> getMyClassOwnersSet() {
         return Collections.unmodifiableSet(myClassOwnersSet);
+        //return myClassOwnersSet;//wrong
+    }
+
+    public int getInteger() { //OK because Integer is immutable class
+        return integer;
     }
 
     @Override
