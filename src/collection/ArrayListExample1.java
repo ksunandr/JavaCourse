@@ -32,5 +32,6 @@ public class ArrayListExample1 {
 
         List<int[]> intArraysArrayList = new ArrayList<>();
         intArraysArrayList.add(new int[]{1});
+
     }
 }
