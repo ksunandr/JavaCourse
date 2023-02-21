@@ -14,10 +14,10 @@ import java.util.Collections;
 
 public class InterviewFluro {
 
-
+    private static final String INPUT = "fluro";
     public static void main(String[] args) {
-        String input = "fluro";
-        System.out.println(byStringBuilder(input));
+
+        System.out.println(byStringBuilder(INPUT));
     }
 
 
