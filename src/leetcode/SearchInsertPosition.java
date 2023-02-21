@@ -1,11 +1,13 @@
 package leetcode;
 
+import java.util.Arrays;
+
 public class SearchInsertPosition {
 
     public static void main(String[] args) {
 
 
-        System.out.println( betterSolution( new int[] { 1, 2, 3, 5 }, 1));
+        System.out.println( "result:" +shortSolution( new int[] {  2,  3, 5 }, 1));
 
     }
     public static int mySolution(int[] nums, int target) {
@@ -69,5 +71,12 @@ public class SearchInsertPosition {
 
 
 
+    }
+
+    public static int shortSolution(int[] nums, int target) {
+        int index = Arrays.binarySearch(nums, target);
+
+        System.out.println(index);
+        return index < 0 ? -(index + 1) : index;
     }
 }
