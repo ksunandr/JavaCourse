@@ -7,7 +7,7 @@ public class SearchInsertPosition {
     public static void main(String[] args) {
 
 
-        System.out.println( "result:" +shortSolution( new int[] {  2,  3, 5 }, 1));
+        System.out.println( "result:" +betterSolution( new int[] {  2,  3, 5, 6,8,9,10, 13, 30}, 1));
 
     }
     public static int mySolution(int[] nums, int target) {
@@ -49,8 +49,9 @@ public class SearchInsertPosition {
         int start = 0;
         int end = nums.length - 1;
 
-
         while(start<=end){
+            System.out.println("start = "+start);
+            System.out.println("end = "+end);
 
             int mid = start + ( (end-start) /2 );
             if (nums[mid] == target) return mid;
@@ -65,6 +66,8 @@ public class SearchInsertPosition {
 
 
         }
+        System.out.println("start = "+start);
+        System.out.println("end = "+end);
         return start;
 
 
@@ -74,9 +77,15 @@ public class SearchInsertPosition {
     }
 
     public static int shortSolution(int[] nums, int target) {
-        int index = Arrays.binarySearch(nums, target);
 
-        System.out.println(index);
+        //Returns:
+       // index of the search key, if it is contained in the array;
+        // otherwise, (-(insertion point) - 1).
+        // The insertion point is defined as the point at which the key would be inserted into the array:
+        // the index of the first element greater than the key, or a.length if all elements in the array
+        // are less than the specified key. Note that this guarantees that the return value will be >= 0
+        // if and only if the key is found
+        int index = Arrays.binarySearch(nums, target);
         return index < 0 ? -(index + 1) : index;
     }
 }

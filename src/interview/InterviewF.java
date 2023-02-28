@@ -2,9 +2,10 @@ package interview;
 
 /*
 * 17/02/2023
+* Company: Fluro
 * Interview Java Software engineer 30 min
 * Common questions about my personality and experience + one task
-* Company is Fluro
+* Company: Fluro
 * :(
  */
 
@@ -12,7 +13,7 @@ package interview;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class InterviewFluro {
+public class InterviewF {
 
     private static final String INPUT = "fluro";
     public static void main(String[] args) {

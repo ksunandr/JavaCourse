@@ -9,5 +9,9 @@ public class MapTest {
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put(null, "1");
 
+      String o =   hashMap.get("9");
+
+        System.out.println(o);
+
     }
 }
