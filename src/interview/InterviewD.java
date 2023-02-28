@@ -50,7 +50,7 @@ class MyTree {
     int findMaxValue(Node node) {
 
         if (node == null) {
-            return -1;
+            return -1; //or minimum int value
 
         }
         int res = node.value;
