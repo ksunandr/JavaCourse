@@ -13,5 +13,10 @@ public class MapTest {
 
         System.out.println(o);
 
+
+        for (Map.Entry<String, String> entry: hashMap.entrySet()) {
+
+        }
+
     }
 }

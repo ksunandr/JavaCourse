@@ -4,9 +4,9 @@ package interview;
 * 17/02/2023
 * Company: Fluro
 * Interview Java Software engineer 30 min
-* Common questions about my personality and experience + one task
+* Common questions about my personality and experience + one task: revert a string
 * Company: Fluro
-* :(
+* 
  */
 
 

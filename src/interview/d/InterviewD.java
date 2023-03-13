@@ -1,7 +1,4 @@
-package interview;
-
-import java.util.Map;
-import java.util.TreeMap;
+package interview.d;
 
 /*
 * 23/02/23
@@ -16,6 +13,10 @@ import java.util.TreeMap;
 * One more method (don't remember, because I didn't start do it)
 * Unit test for findMaximumValue
 */
+
+
+
+
 public class InterviewD {
     public static void main(String[] args) {
 
@@ -36,7 +37,8 @@ public class InterviewD {
 
 class Node {
     int value;
-    Node left, right;
+    Node left;
+    Node right;
 
     public Node(int data) {
         this.value = data;
