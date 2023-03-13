@@ -24,7 +24,7 @@ public class ValidParentheses {
             if (input[i] == kr1 || input[i] == kv1 || input[i] == fg1) {
                 System.out.println("push " + input[i]);
 
-                stk.push(input[i]); stk.()
+                stk.push(input[i]);
             } else {
                 if (input[i] == kr2 && stk.peek() == kr1) {
                     System.out.println("pop " + input[i]);
