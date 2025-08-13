@@ -12,13 +12,14 @@ package interview;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
+/*Revert string*/
 public class InterviewF {
 
     private static final String INPUT = "fluro";
     public static void main(String[] args) {
 
         System.out.println(byStringBuilder(INPUT));
+        System.out.println(myMethod(INPUT));
     }
 
 
